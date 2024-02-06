@@ -1,0 +1,8 @@
+.gitignore
+.editorconfig
+.eslintignore
+.npmignore
+.npmrc
+.prettierignore
+
+pnpm-lock.yaml
