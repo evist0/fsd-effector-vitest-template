@@ -1,18 +1,17 @@
 import { act } from 'react-dom/test-utils';
 import { fork } from 'effector';
-import { expect, it } from 'vitest';
-
-import { counterTextSelectors } from '~/entities/counter';
-import { decrementButtonSelectors } from '~/features/counter/decrement';
-import { incrementButtonSelectors } from '~/features/counter/increment';
-
-import { createCounterWidget } from './model.ts';
-import { CounterWidget } from './ui.tsx';
-
 import { render } from '@testing-library/react';
 import { invoke } from '@withease/factories';
 
-it('Отображает counter+1 при клике на инкремент', () => {
+import { decrementButtonSelectors } from '~/features/counter/decrement';
+import { incrementButtonSelectors } from '~/features/counter/increment';
+
+import { counterTextSelectors } from '~/entities/counter';
+
+import { createCounterWidget } from './model';
+import { CounterWidget } from './ui';
+
+it('отображает counter+1 при клике на инкремент', () => {
   fork();
 
   const initialValue = 1;
@@ -31,7 +30,7 @@ it('Отображает counter+1 при клике на инкремент', (
   expect(counter).toHaveTextContent(expectedValue.toString());
 });
 
-it('Отображает counter-1 при клике на декремент', () => {
+it('отображает counter-1 при клике на декремент', () => {
   fork();
 
   const initialValue = 1;

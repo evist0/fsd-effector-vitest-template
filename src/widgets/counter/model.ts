@@ -1,10 +1,10 @@
 import { type EventCallable, type StoreWritable } from 'effector';
+import { createFactory, invoke } from '@withease/factories';
 
-import { createCounter } from '~/entities/counter';
 import { createDecrement } from '~/features/counter/decrement';
 import { createIncrement } from '~/features/counter/increment';
 
-import { createFactory, invoke } from '@withease/factories';
+import { createCounter } from '~/entities/counter';
 
 export const DEFAULT_LABEL = 'Counter';
 export const DEFAULT_COUNTER = 0;

@@ -1,3 +1,3 @@
-export { createDecrement, type DecrementModel } from './model.ts';
+export { createDecrement, type DecrementModel } from './model';
 
-export { DecrementButton, type DecrementButtonProps, decrementButtonSelectors } from './ui/button';
+export { DecrementButton, type DecrementButtonProps, decrementButtonSelectors } from './ui';

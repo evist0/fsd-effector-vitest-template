@@ -1,5 +1,4 @@
 import { createStore, type StoreWritable } from 'effector';
-
 import { createFactory } from '@withease/factories';
 
 export type CreateCounterParams = {

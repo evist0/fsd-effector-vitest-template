@@ -1,19 +1,17 @@
 import { createStore, fork } from 'effector';
-import { expect, it } from 'vitest';
-
-import { type CounterModel } from '../../model.ts';
-
-import { selectors } from './selectors.ts';
-import { CounterText } from './text.tsx';
-
 import { render } from '@testing-library/react';
+
+import { type CounterModel } from '../../model';
+
+import { selectors } from './selectors';
+import { CounterText } from './text';
 
 const MOCK_MODEL: CounterModel = {
   label: 'Counter',
   $counter: createStore<number>(0),
 };
 
-it('Корректно отображает "label"', () => {
+it('корректно отображает "label"', () => {
   fork();
 
   const { queryByTestId } = render(<CounterText model={MOCK_MODEL} />);
@@ -22,7 +20,7 @@ it('Корректно отображает "label"', () => {
   expect(label).toHaveTextContent(MOCK_MODEL.label);
 });
 
-it('Корректно отображает "$counter"', () => {
+it('корректно отображает "$counter"', () => {
   const scope = fork();
 
   const { queryByTestId } = render(<CounterText model={MOCK_MODEL} />);

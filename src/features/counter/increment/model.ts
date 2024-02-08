@@ -1,8 +1,7 @@
 import { createEvent, type EventCallable, sample } from 'effector';
+import { createFactory } from '@withease/factories';
 
 import { type CounterModel } from '~/entities/counter';
-
-import { createFactory } from '@withease/factories';
 
 export type CreateIncrementParams = CounterModel;
 

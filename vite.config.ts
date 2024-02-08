@@ -1,10 +1,9 @@
 import path from 'path';
-import { defineConfig, type UserConfig } from 'vite';
-
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 
 // https://vitejs.dev/config/
-export const DEFAULT_CONFIG: UserConfig = {
+export default defineConfig({
   plugins: [
     react({
       plugins: [
@@ -22,6 +21,4 @@ export const DEFAULT_CONFIG: UserConfig = {
       '~': path.resolve(__dirname, './src'),
     },
   },
-};
-
-export default defineConfig(DEFAULT_CONFIG);
+});

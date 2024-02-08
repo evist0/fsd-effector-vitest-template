@@ -1,14 +1,20 @@
-import { defineConfig } from 'vitest/config';
+import { configDefaults, mergeConfig } from 'vitest/config';
 
-import { DEFAULT_CONFIG } from './vite.config';
+import viteConfig from './vite.config';
 
 // https://vitest.dev/config/
-export default defineConfig({
-  ...DEFAULT_CONFIG,
+export default mergeConfig(viteConfig, {
   test: {
     globals: true,
     environment: 'jsdom',
     css: true,
     setupFiles: ['.vitest/setup.ts'],
+    typecheck: {
+      enabled: true,
+    },
+    coverage: {
+      provider: 'istanbul',
+      exclude: [...configDefaults.coverage.exclude, '*.config.cjs'],
+    },
   },
 });

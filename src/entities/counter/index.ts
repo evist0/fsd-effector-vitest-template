@@ -1,3 +1,3 @@
-export { createCounter, type CounterModel } from './model.ts';
+export { createCounter, type CounterModel } from './model';
 
-export { CounterText, type CounterTextProps, counterTextSelectors } from './ui/text';
+export { CounterText, type CounterTextProps, counterTextSelectors } from './ui';

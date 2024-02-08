@@ -1,10 +1,9 @@
 import { type FC } from 'react';
+import { invoke } from '@withease/factories';
 
-import { CounterWidget, createCounterWidget } from '~/widget/counter';
+import { CounterWidget, createCounterWidget } from '~/widgets/counter';
 
 import './globals.css';
-
-import { invoke } from '@withease/factories';
 
 const counterA = invoke(createCounterWidget, { initialLabel: 'Counter A' });
 const counterB = invoke(createCounterWidget, { initialLabel: 'Counter B' });

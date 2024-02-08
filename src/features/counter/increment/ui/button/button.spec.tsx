@@ -1,12 +1,10 @@
 import { createEvent, fork, sample } from 'effector';
-import { expect, it, vi } from 'vitest';
-
-import { type IncrementModel } from '../../model.ts';
-
-import { DEFAULT_TEXT, IncrementButton, type IncrementButtonProps } from './button.tsx';
-import { selectors } from './selectors.ts';
-
 import { render, waitFor } from '@testing-library/react';
+
+import { type IncrementModel } from '../../model';
+
+import { DEFAULT_TEXT, IncrementButton, type IncrementButtonProps } from './button';
+import { selectors } from './selectors';
 
 const MOCK_MODEL: IncrementModel = {
   increment: createEvent<void>(),
@@ -26,7 +24,7 @@ async function queryIncrementButton({
   return button;
 }
 
-it('Вызывает "increment" при клике', async () => {
+it('вызывает "increment" при клике', async () => {
   fork();
 
   const fn = vi.fn();
@@ -41,7 +39,18 @@ it('Вызывает "increment" при клике', async () => {
   expect(fn).toHaveBeenCalledOnce();
 });
 
-it(`Отображает переданный "children"`, async () => {
+it('вызывает переданный "onClick"', async () => {
+  fork();
+
+  const onClick = vi.fn();
+
+  const button = await queryIncrementButton({ onClick });
+  button.click();
+
+  expect(onClick).toHaveBeenCalledOnce();
+});
+
+it(`отображает переданный "children"`, async () => {
   fork();
 
   const children = 'Увеличить';
@@ -51,7 +60,7 @@ it(`Отображает переданный "children"`, async () => {
   expect(button).toHaveTextContent(children);
 });
 
-it(`Отображает "${DEFAULT_TEXT}", если "children" не передан`, async () => {
+it(`отображает "${DEFAULT_TEXT}", если "children" не передан`, async () => {
   fork();
 
   const button = await queryIncrementButton({});

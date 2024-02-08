@@ -1,3 +1,3 @@
-export { createIncrement, type IncrementModel } from './model.ts';
+export { createIncrement, type IncrementModel } from './model';
 
-export { IncrementButton, type IncrementButtonProps, incrementButtonSelectors } from './ui/button';
+export { IncrementButton, type IncrementButtonProps, incrementButtonSelectors } from './ui';

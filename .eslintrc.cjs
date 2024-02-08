@@ -1,12 +1,16 @@
 const disables = {
   'react/react-in-jsx-scope': 0,
+  'jest/no-deprecated-functions': 0,
+  'jest/require-hook': 'off',
 };
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
+  processor: '@feature-sliced/messages/fs',
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: 'tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -15,31 +19,57 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx'],
-      },
+      node: {},
       typescript: {},
     },
-    'import/ignore': ['node_modules'],
+    clsxOptions: {
+      myclsx: 'cn',
+    },
   },
-  plugins: ['import', 'react', '@typescript-eslint', 'simple-import-sort', 'vitest'],
+  reportUnusedDisableDirectives: true,
+  plugins: [
+    'import',
+    'react',
+    '@typescript-eslint',
+    'simple-import-sort',
+    'jest',
+    '@stylistic/migrate',
+    '@stylistic/ts',
+    '@stylistic/jsx',
+    '@feature-sliced/eslint-plugin-messages',
+    'effector',
+  ],
   extends: [
+    '@feature-sliced/eslint-config/rules/public-api',
+    '@feature-sliced/eslint-config/rules/layers-slices',
     'plugin:import/recommended',
     'plugin:clsx/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:vitest/recommended',
+    'plugin:jest/all',
+    'plugin:effector/recommended',
+    'plugin:effector/scope',
+    'plugin:effector/react',
+    'plugin:effector/future',
+    'plugin:effector/patronum',
   ],
   rules: {
     ...disables,
     // General
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: ':matches(ExportAllDeclaration)',
+        message: 'Export only modules you need.',
+      },
+    ],
+    'no-restricted-imports': ['error', 'vitest'],
     'no-warning-comments': ['error', { terms: ['todo', 'fixme'], location: 'anywhere' }],
     'max-params': ['error', 4],
     'no-console': 'error',
     // TS
-    semi: 'off',
-    '@typescript-eslint/semi': ['error', 'always'],
+    '@stylistic/ts/semi': ['error', 'always'],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -50,12 +80,18 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    '@typescript-eslint/member-delimiter-style': 'error',
+    '@stylistic/ts/member-delimiter-style': 'error',
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {
-        disallowTypeAnnotations: false,
         fixStyle: 'inline-type-imports',
+        disallowTypeAnnotations: false,
+      },
+    ],
+    '@typescript-eslint/consistent-type-exports': [
+      'error',
+      {
+        fixMixedExportsWithInlineTypeSpecifier: true,
       },
     ],
     // Import
@@ -75,14 +111,24 @@ module.exports = {
       'error',
       {
         groups: [
-          ['^react', '^\\w'],
-          ['^~'],
+          ['^react', '^\\w', '^@'],
+          ['^~/app'],
+          ['^~/pages'],
+          ['^~/widgets'],
+          ['^~/features'],
+          ['^~/entities'],
+          ['^~/shared'],
           ['^\\.\\./'],
           ['^\\./'],
           ['^.+\\.types$', '^.+\\.css$'],
         ],
       },
     ],
+    // Effector
+    'effector/no-watch': 'error',
+    // Stylistic migration
+    '@stylistic/migrate/migrate-js': 'error',
+    '@stylistic/migrate/migrate-ts': 'error',
   },
   overrides: [
     // Configs
@@ -95,8 +141,9 @@ module.exports = {
         'vite.config.ts',
         'vitest.config.ts',
       ],
-      parserOptions: {},
-      extends: [],
+      parserOptions: {
+        project: 'tsconfig.node.json',
+      },
       rules: {
         'import/no-extraneous-dependencies': [
           'error',
@@ -116,6 +163,10 @@ module.exports = {
             devDependencies: true,
           },
         ],
+        'jest/consistent-test-it': ['error', { fn: 'it' }],
+        'jest/require-top-level-describe': 'off',
+        'jest/prefer-expect-assertions': 'off',
+        'effector/no-useless-methods': 'off',
       },
     },
   ],

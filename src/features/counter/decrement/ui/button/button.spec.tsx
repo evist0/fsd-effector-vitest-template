@@ -1,12 +1,10 @@
 import { createEvent, fork, sample } from 'effector';
-import { expect, it, vi } from 'vitest';
-
-import { type DecrementModel } from '../../model.ts';
-
-import { DecrementButton, type DecrementButtonProps, DEFAULT_TEXT } from './button.tsx';
-import { selectors } from './selectors.ts';
-
 import { render, waitFor } from '@testing-library/react';
+
+import { type DecrementModel } from '../../model';
+
+import { DecrementButton, type DecrementButtonProps, DEFAULT_TEXT } from './button';
+import { selectors } from './selectors';
 
 const MOCK_MODEL: DecrementModel = {
   decrement: createEvent<void>(),
@@ -26,7 +24,7 @@ async function queryDecrementButton({
   return button;
 }
 
-it('Вызывает "decrement" при клике', async () => {
+it('вызывает "decrement" при клике', async () => {
   fork();
 
   const fn = vi.fn();
@@ -41,7 +39,18 @@ it('Вызывает "decrement" при клике', async () => {
   expect(fn).toHaveBeenCalledOnce();
 });
 
-it(`Отображает переданный "children"`, async () => {
+it('вызывает переданный "onClick"', async () => {
+  fork();
+
+  const onClick = vi.fn();
+
+  const button = await queryDecrementButton({ onClick });
+  button.click();
+
+  expect(onClick).toHaveBeenCalledOnce();
+});
+
+it(`отображает переданный "children"`, async () => {
   fork();
 
   const children = 'Уменьшить';

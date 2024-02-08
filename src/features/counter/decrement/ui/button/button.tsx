@@ -3,9 +3,9 @@ import { useUnit } from 'effector-react';
 
 import { Button, type ButtonProps } from '~/shared/ui/button';
 
-import { type DecrementModel } from '../../model.ts';
+import { type DecrementModel } from '../../model';
 
-import { selectors } from './selectors.ts';
+import { selectors } from './selectors';
 
 export type DecrementButtonProps = { model: DecrementModel } & ButtonProps;
 

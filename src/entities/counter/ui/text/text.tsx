@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
 import { useUnit } from 'effector-react';
 
-import { type CounterModel } from '../../model.ts';
+import { type CounterModel } from '../../model';
 
-import { selectors } from './selectors.ts';
+import { selectors } from './selectors';
 
 export type CounterTextProps = {
   model: CounterModel;

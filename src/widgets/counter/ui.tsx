@@ -1,11 +1,13 @@
 import { forwardRef } from 'react';
 
-import { CounterText } from '~/entities/counter';
 import { DecrementButton } from '~/features/counter/decrement';
 import { IncrementButton } from '~/features/counter/increment';
+
+import { CounterText } from '~/entities/counter';
+
 import { cn } from '~/shared/lib/utils';
 
-import { type CounterWidgetModel } from './model.ts';
+import { type CounterWidgetModel } from './model';
 
 export type CounterWidgetProps = {
   className?: string;
