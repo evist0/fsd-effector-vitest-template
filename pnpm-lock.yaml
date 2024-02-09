@@ -136,6 +136,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.17
     version: 10.4.17(postcss@8.4.35)
+  chromatic:
+    specifier: ^10.9.2
+    version: 10.9.2
   effector-swc-plugin:
     specifier: ^0.2.1
     version: 0.2.1(@swc/core@1.4.0)
@@ -5277,6 +5280,19 @@ packages:
   /chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /chromatic@10.9.2:
+    resolution: {integrity: sha512-QLs89o1pRVtiSsHH+nRu/5JnjsnGvgA4M0WbMmXoWiE9tJDo41vY2M9tjCXsYplrSeiLwGyXX26ndfIrQ0L2nQ==}
+    hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.5.2 || ^1.0.0
+      '@chromatic-com/playwright': ^0.5.2 || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
     dev: true
 
   /ci-info@3.9.0:
