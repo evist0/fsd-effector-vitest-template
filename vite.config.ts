@@ -19,6 +19,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': path.resolve(__dirname, './src'),
+      // https://github.com/mswjs/msw-storybook-addon/issues/131
+      'msw/native': path.resolve(__dirname, './node_modules/msw/lib/native/index.mjs'),
     },
   },
 });

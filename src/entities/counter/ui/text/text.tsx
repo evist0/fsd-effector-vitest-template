@@ -1,18 +1,14 @@
 import { forwardRef } from 'react';
-import { useUnit } from 'effector-react';
-
-import { type CounterModel } from '../../model';
 
 import { selectors } from './selectors';
 
 export type CounterTextProps = {
-  model: CounterModel;
+  label: string;
+  counter: number;
 };
 
 export const CounterText = forwardRef<HTMLDivElement, CounterTextProps>(
-  ({ model: { label, $counter } }, ref) => {
-    const counter = useUnit($counter);
-
+  ({ label, counter }, ref) => {
     return (
       <div ref={ref} className={'text-center space-y-6'}>
         <div>
