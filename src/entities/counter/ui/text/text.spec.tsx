@@ -1,31 +1,53 @@
-import { createStore, fork } from 'effector';
-import { render } from '@testing-library/react';
-
-import { type CounterModel } from '../../model';
+import { render, waitFor } from '@testing-library/react';
 
 import { selectors } from './selectors';
-import { CounterText } from './text';
+import { CounterText, type CounterTextProps } from './text';
 
-const MOCK_MODEL: CounterModel = {
-  label: 'Counter',
-  $counter: createStore<number>(0),
-};
+async function renderComponent(props: Partial<CounterTextProps>) {
+  const DEFAULT_PROPS: CounterTextProps = {
+    label: 'Counter',
+    counter: 0,
+  };
 
-it('корректно отображает "label"', () => {
-  fork();
+  const mergedProps = Object.assign({}, DEFAULT_PROPS, props);
 
-  const { queryByTestId } = render(<CounterText model={MOCK_MODEL} />);
+  return render(<CounterText {...mergedProps} />);
+}
+
+async function queryLabel(props: Partial<CounterTextProps>) {
+  const { queryByTestId } = await renderComponent(props);
   const label = queryByTestId(selectors.label);
 
-  expect(label).toHaveTextContent(MOCK_MODEL.label);
-});
+  await waitFor(() => expect(label).toBeVisible());
 
-it('корректно отображает "$counter"', () => {
-  const scope = fork();
+  if (!label) throw 'Не удалось найти заголовок';
 
-  const { queryByTestId } = render(<CounterText model={MOCK_MODEL} />);
+  return label;
+}
+
+async function queryCounter(props: Partial<CounterTextProps>) {
+  const { queryByTestId } = await renderComponent(props);
   const counter = queryByTestId(selectors.counter);
 
-  const actualCounter = scope.getState(MOCK_MODEL.$counter);
-  expect(counter).toHaveTextContent(actualCounter.toString());
+  await waitFor(() => expect(counter).toBeVisible());
+
+  if (!counter) throw 'Не удалось найти счетчик';
+
+  return counter;
+}
+
+it('корректно отображает "label"', async () => {
+  const label = 'My magic counter';
+
+  const element = await queryLabel({ label });
+
+  expect(element).toHaveTextContent(label);
+});
+
+it('корректно отображает "counter"', async () => {
+  const counter = 10;
+
+  const element = await queryCounter({ counter });
+
+  expect(element).toHaveTextContent(counter.toString());
 });

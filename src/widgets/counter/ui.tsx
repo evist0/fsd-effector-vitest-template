@@ -17,15 +17,19 @@ export type CounterWidgetProps = {
 
 export const CounterWidget = forwardRef<HTMLDivElement, CounterWidgetProps>(
   ({ className, model }, ref) => {
-    const [counter] = useUnit([model.$counter, model.decrement, model.increment]);
+    const [counter, decrement, increment] = useUnit([
+      model.$counter,
+      model.decrement,
+      model.increment,
+    ]);
 
     return (
       <div ref={ref} className={cn('space-y-8', className)}>
         <CounterText label={model.label} counter={counter} />
 
         <div className={'flex space-x-2'}>
-          <DecrementButton model={model} className={'w-full'} />
-          <IncrementButton model={model} className={'w-full'} />
+          <DecrementButton onClick={decrement} className={'w-full'} />
+          <IncrementButton onClick={increment} className={'w-full'} />
         </div>
       </div>
     );

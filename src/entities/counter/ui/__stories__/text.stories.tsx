@@ -13,6 +13,4 @@ const meta: Meta<typeof CounterText> = {
 export default meta;
 type Story = StoryObj<typeof CounterText>;
 
-export const Text: Story = {
-  args: {},
-};
+export const Text: Story = {};

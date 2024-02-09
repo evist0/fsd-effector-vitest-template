@@ -26,13 +26,13 @@
     /* Absolute paths */
     "baseUrl": "./",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "test-utils": ["./.vitest/test-utils"]
     },
     /* Globals */
     "types": ["node", "vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
-  "files": [".vitest/setup.ts"],
+  "include": ["src", ".vitest"],
   "references": [
     {
       "path": "./tsconfig.node.json"

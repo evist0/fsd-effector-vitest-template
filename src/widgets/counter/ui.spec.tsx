@@ -1,50 +1,67 @@
-import { act } from 'react-dom/test-utils';
-import { fork } from 'effector';
-import { render } from '@testing-library/react';
-import { invoke } from '@withease/factories';
+import { createEvent, createStore, sample } from 'effector';
+import { renderWithScope } from 'test-utils';
+import { expect } from '@storybook/test';
 
 import { decrementButtonSelectors } from '~/features/counter/decrement';
 import { incrementButtonSelectors } from '~/features/counter/increment';
 
 import { counterTextSelectors } from '~/entities/counter';
 
-import { createCounterWidget } from './model';
+import { type CounterWidgetModel } from './model';
 import { CounterWidget } from './ui';
 
-it('отображает counter+1 при клике на инкремент', () => {
-  fork();
+const MOCK_MODEL: CounterWidgetModel = {
+  label: 'Counter',
+  $counter: createStore<number>(0),
+  increment: createEvent<void>(),
+  decrement: createEvent<void>(),
+};
 
-  const initialValue = 1;
-  const model = invoke(createCounterWidget, { initialValue });
+it('отображает "label" согласно модели', () => {
+  const { queryByTestId } = renderWithScope(<CounterWidget model={MOCK_MODEL} />);
 
-  const { queryByTestId } = render(<CounterWidget model={model} />);
+  const label = queryByTestId(counterTextSelectors.label);
 
-  const counter = queryByTestId(counterTextSelectors.counter);
-  const incrementButton = queryByTestId(incrementButtonSelectors.button);
-
-  act(() => {
-    incrementButton?.click();
-  });
-
-  const expectedValue = initialValue + 1;
-  expect(counter).toHaveTextContent(expectedValue.toString());
+  expect(label).toHaveTextContent(MOCK_MODEL.label);
 });
 
-it('отображает counter-1 при клике на декремент', () => {
-  fork();
-
-  const initialValue = 1;
-  const model = invoke(createCounterWidget, { initialValue });
-
-  const { queryByTestId } = render(<CounterWidget model={model} />);
-
-  const counter = queryByTestId(counterTextSelectors.counter);
-  const decrementButton = queryByTestId(decrementButtonSelectors.button);
-
-  act(() => {
-    decrementButton?.click();
+it('отображает "$counter" согласно модели', () => {
+  const value = 5;
+  const { queryByTestId } = renderWithScope(<CounterWidget model={MOCK_MODEL} />, {
+    values: [[MOCK_MODEL.$counter, value]],
   });
 
-  const expectedValue = initialValue - 1;
-  expect(counter).toHaveTextContent(expectedValue.toString());
+  const counter = queryByTestId(counterTextSelectors.counter);
+
+  expect(counter).toHaveTextContent(value.toString());
+});
+
+it('вызывает "increment" при клике на кнопку инкремента', () => {
+  const fn = vi.fn();
+  sample({
+    clock: MOCK_MODEL.increment,
+    fn,
+  });
+
+  const { queryByTestId } = renderWithScope(<CounterWidget model={MOCK_MODEL} />);
+
+  const incrementButton = queryByTestId(incrementButtonSelectors.button);
+  incrementButton?.click();
+
+  expect(fn).toHaveBeenCalledOnce();
+});
+
+it('вызывает "decrement" при клике на кнопку декремента', () => {
+  const fn = vi.fn();
+  sample({
+    clock: MOCK_MODEL.decrement,
+    fn,
+  });
+
+  const { queryByTestId } = renderWithScope(<CounterWidget model={MOCK_MODEL} />);
+
+  const decrementButton = queryByTestId(decrementButtonSelectors.button);
+  decrementButton?.click();
+
+  expect(fn).toHaveBeenCalledOnce();
 });

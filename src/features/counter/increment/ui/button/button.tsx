@@ -1,35 +1,19 @@
-import { forwardRef, type MouseEvent, useCallback } from 'react';
-import { useUnit } from 'effector-react';
+import { forwardRef } from 'react';
 
 import { Button, type ButtonProps } from '~/shared/ui/button';
 
-import { type IncrementModel } from '../../model';
-
 import { selectors } from './selectors';
 
-export type IncrementButtonProps = { model: IncrementModel } & ButtonProps;
+export type IncrementButtonProps = ButtonProps;
 
 export const DEFAULT_TEXT = '+1';
 
 export const IncrementButton = forwardRef<HTMLButtonElement, IncrementButtonProps>(
-  ({ children = DEFAULT_TEXT, model, onClick, ...props }, ref) => {
-    const onIncrement = useUnit(model.increment);
-
-    const _onClick = useCallback(
-      (e: MouseEvent<HTMLButtonElement>) => {
-        onIncrement();
-
-        if (onClick) onClick(e);
-      },
-      [onIncrement, onClick]
-    );
-
-    return (
-      <Button ref={ref} onClick={_onClick} {...props} data-testid={selectors.button}>
-        {children}
-      </Button>
-    );
-  }
+  ({ children = DEFAULT_TEXT, ...props }, ref) => (
+    <Button ref={ref} {...props} data-testid={selectors.button}>
+      {children}
+    </Button>
+  )
 );
 
 IncrementButton.displayName = 'IncrementButton';

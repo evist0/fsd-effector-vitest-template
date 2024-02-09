@@ -170,5 +170,18 @@ module.exports = {
         'effector/no-useless-methods': 'off',
       },
     },
+    // Stories
+    {
+      files: ['**/__stories__/*.stories.@(js|jsx|mjs|ts|tsx)'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          {
+            devDependencies: true,
+          },
+        ],
+        'effector/no-useless-methods': 'off',
+      },
+    },
   ],
 };
