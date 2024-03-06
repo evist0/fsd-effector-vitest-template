@@ -6,14 +6,7 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   plugins: [
     react({
-      plugins: [
-        [
-          'effector-swc-plugin',
-          {
-            factories: ['@withease/factories'],
-          },
-        ],
-      ],
+      plugins: [['effector-swc-plugin', {}]],
     }),
   ],
   server: {

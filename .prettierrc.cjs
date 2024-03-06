@@ -4,8 +4,8 @@ module.exports = {
   singleQuote: true,
   jsxSingleQuote: true,
   semi: true,
-  trailingComma: "es5",
-  arrowParens: "always",
-  htmlWhitespaceSensitivity: "strict",
-  plugins: ['prettier-plugin-packagejson']
-}
+  trailingComma: 'es5',
+  arrowParens: 'always',
+  htmlWhitespaceSensitivity: 'strict',
+  plugins: ['prettier-plugin-packagejson'],
+};
