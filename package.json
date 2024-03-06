@@ -12,7 +12,7 @@
     "dev": "vite",
     "prepare": "is-ci || husky",
     "storybook": "storybook dev -p 6006",
-    "test:storybook": "test-storybook",
+    "test:storybook": "test-storybook --stories-json",
     "test:unit": "vitest run"
   },
   "dependencies": {
