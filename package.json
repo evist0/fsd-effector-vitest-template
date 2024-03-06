@@ -82,7 +82,7 @@
     "msw": "^2.2.2",
     "msw-storybook-addon": "2.0.0-beta.1",
     "postcss": "^8.4.35",
-    "prettier": "^2.8.8",
+    "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.12",
     "storybook": "^7.6.17",
     "tailwindcss": "^3.4.1",
