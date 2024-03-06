@@ -1,0 +1,104 @@
+name: 'Pull request'
+run-name: 'Pull request: #${{ github.event.pull_request.number }} by ${{ github.actor }}'
+
+on:
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: 'pr-${{ github.event.pull_request.number }}'
+  cancel-in-progress: true
+
+jobs:
+  code-quality:
+    name: 'Code Quality'
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+
+      - name: 'Install pnpm'
+        uses: pnpm/action-setup@v3
+
+      - name: 'Install Node.js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: 'Install dependencies'
+        run: pnpm i --frozen-lockfile
+
+      - name: 'Check Typescript'
+        run: pnpm check:ts
+
+      - name: 'Check ESLint'
+        run: pnpm check:eslint --fix
+
+      - name: 'Check Prettier'
+        run: pnpm check:prettier --write
+
+  test-unit:
+    name: 'Test Unit'
+    needs: [code-quality]
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+
+      - name: 'Install pnpm'
+        uses: pnpm/action-setup@v3
+
+      - name: 'Install Node.js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: 'Install dependencies'
+        run: pnpm i --frozen-lockfile
+
+      - name: 'Test unit'
+        run: pnpm test:unit --coverage
+
+      - name: 'Report coverage'
+        if: always() # Also generate the report if tests are failing
+        uses: davelosert/vitest-coverage-report-action@v2
+# @TODO: wait-on doesn't work as expected
+#  test-storybook:
+#    name: 'Test Storybook'
+#    needs: [test-unit]
+#    permissions:
+#      contents: read
+#      pull-requests: write
+#    runs-on: [ubuntu-latest]
+#    steps:
+#      - name: 'Checkout'
+#        uses: actions/checkout@v4
+#
+#      - name: 'Install pnpm'
+#        uses: pnpm/action-setup@v3
+#
+#      - name: 'Install Node.js'
+#        uses: actions/setup-node@v4
+#        with:
+#          node-version: 18
+#          cache: 'pnpm'
+#
+#      - name: 'Install dependencies'
+#        run: pnpm i --frozen-lockfile
+#
+#      - name: 'Install Playwright'
+#        run: pnpm dlx playwright install --with-deps
+#
+#      - name: 'Build Storybook'
+#        run: pnpm build-storybook --quiet
+#
+#      - name: 'Test Storybook'
+#        run: |
+#          pnpm dlx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+#            "pnpm dlx http-server storybook-static --port 6006 --silent" \
+#            "pnpm dlx wait-on tcp:6006 && pnpm test-storybook"

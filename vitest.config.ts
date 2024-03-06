@@ -2,6 +2,10 @@ import { configDefaults, mergeConfig } from 'vitest/config';
 
 import viteConfig from './vite.config';
 
+const coverageReporter = process.env.GITHUB_ACTIONS
+  ? ['json', 'json-summary']
+  : configDefaults.coverage.reporter;
+
 // https://vitest.dev/config/
 export default mergeConfig(viteConfig, {
   test: {
@@ -9,11 +13,10 @@ export default mergeConfig(viteConfig, {
     environment: 'jsdom',
     css: true,
     setupFiles: ['.vitest/setup.ts'],
-    typecheck: {
-      enabled: true,
-    },
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
+      reportOnFailure: true,
+      reporter: coverageReporter,
       exclude: [...configDefaults.coverage.exclude, '*.config.cjs'],
     },
   },

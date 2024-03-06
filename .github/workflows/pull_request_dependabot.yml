@@ -1,0 +1,39 @@
+name: 'Dependabot'
+run-name: 'Dependabot: #${{ github.event.pull_request.number }} by ${{ github.actor }}'
+
+on:
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: 'dependabot-${{ github.event.pull_request.number }}'
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
+jobs:
+  dependabot:
+    name: 'Dependabot'
+    runs-on: [ubuntu-latest]
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: 'Metadata'
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: 'Approve'
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: 'Auto-merge'
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
