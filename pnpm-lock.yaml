@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^7.6.17
     version: 7.6.17(@types/react-dom@18.2.21)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
   '@storybook/csf-tools':
-    specifier: ^7.6.17
-    version: 7.6.17
+    specifier: ^8.0.0
+    version: 8.0.0
   '@storybook/react':
     specifier: ^7.6.17
     version: 7.6.17(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.2)
