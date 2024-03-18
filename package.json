@@ -84,7 +84,7 @@
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.12",
-    "storybook": "^7.6.17",
+    "storybook": "^8.0.0",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
