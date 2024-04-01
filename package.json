@@ -81,7 +81,7 @@
     "lint-staged": "^15.2.2",
     "msw": "^2.2.13",
     "msw-storybook-addon": "2.0.0--canary.122.06f0c92.0",
-    "postcss": "^8.4.36",
+    "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.12",
     "storybook": "^8.0.5",
