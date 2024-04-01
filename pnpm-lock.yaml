@@ -92,8 +92,8 @@ devDependencies:
     specifier: ^1.6.3
     version: 1.6.3(eslint@8.57.0)
   '@stylistic/eslint-plugin-migrate':
-    specifier: ^1.6.3
-    version: 1.6.3(eslint@8.57.0)(typescript@5.4.3)
+    specifier: ^1.7.0
+    version: 1.7.0(eslint@8.57.0)(typescript@5.4.3)
   '@stylistic/eslint-plugin-ts':
     specifier: ^1.6.3
     version: 1.6.3(eslint@8.57.0)(typescript@5.4.3)
@@ -2194,8 +2194,8 @@ packages:
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
-  /@eslint-stylistic/metadata@1.6.3:
-    resolution: {integrity: sha512-59kl0sqQH4Yc44bRRz68UGUMjDahPifTrHcrlXg5KnDrqHGVyA54QSq0c98p70M9cypqkeZGXB/R5ZjUmOCHwg==}
+  /@eslint-stylistic/metadata@1.7.0:
+    resolution: {integrity: sha512-EdyFKr1BHcx45o6gMZuCkFS64XHzVGFql0V3oL6mZwepnueulpmjsPxTiRRdrYdRknmQA+vjj1/znFkGRrPWHQ==}
     dev: true
 
   /@eslint/eslintrc@2.1.4:
@@ -4902,11 +4902,11 @@ packages:
       picomatch: 4.0.1
     dev: true
 
-  /@stylistic/eslint-plugin-migrate@1.6.3(eslint@8.57.0)(typescript@5.4.3):
-    resolution: {integrity: sha512-RW4ri3qiCq9qKxgRZr9801MrBvmUWmTW7uF7Rawn3rgQjpQ5ziAyybS0RTvhTtMFKu7dfDu2yK6UgERCK9jqQw==}
+  /@stylistic/eslint-plugin-migrate@1.7.0(eslint@8.57.0)(typescript@5.4.3):
+    resolution: {integrity: sha512-1xcTyY8EIyRLtI86c2XM2GYLv9tBAuelYCH8i2H84k8lSWO8fTg9ArohG3Oo2bj55KFkOHO39lU1QlfKDMpxLQ==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
-      '@eslint-stylistic/metadata': 1.6.3
+      '@eslint-stylistic/metadata': 1.7.0
       '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.3)
     transitivePeerDependencies:
       - eslint
