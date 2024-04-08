@@ -39,7 +39,7 @@
     "@storybook/addon-storysource": "^8.0.5",
     "@storybook/addon-themes": "^8.0.5",
     "@storybook/blocks": "^8.0.5",
-    "@storybook/csf-tools": "^8.0.0",
+    "@storybook/csf-tools": "^8.0.6",
     "@storybook/react": "^8.0.0",
     "@storybook/react-vite": "^8.0.4",
     "@storybook/test": "^8.0.5",
