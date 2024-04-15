@@ -65,8 +65,8 @@ devDependencies:
     specifier: ^8.0.6
     version: 8.0.6
   '@storybook/addon-themes':
-    specifier: ^8.0.5
-    version: 8.0.5
+    specifier: ^8.0.8
+    version: 8.0.8
   '@storybook/blocks':
     specifier: ^8.0.5
     version: 8.0.5(@types/react@18.2.78)(react-dom@18.2.0)(react@18.2.0)
@@ -3401,8 +3401,8 @@ packages:
       tiny-invariant: 1.3.3
     dev: true
 
-  /@storybook/addon-themes@8.0.5:
-    resolution: {integrity: sha512-NIqjpdU3XwuaUYMp0woE8d8S6d2nlddTU/Q727VqrBJIkMYyqSD1NmoafpHEXiLiPX0bfOxGyD5uhPQCyGUVAw==}
+  /@storybook/addon-themes@8.0.8:
+    resolution: {integrity: sha512-vLzWHByRDULzerQtkTEYJEy9xIIw50LVfHg5b54peqlXLenrEnJnDkvmuZV2FzDeyVMIoG+MEAzTVi9BQ13uDQ==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
