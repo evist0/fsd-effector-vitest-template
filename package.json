@@ -19,7 +19,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@withease/factories": "^1.0.3",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "effector": "^23.2.1",
     "effector-react": "^23.2.0",
     "lucide-react": "^0.376.0",
