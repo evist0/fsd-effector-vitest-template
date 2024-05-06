@@ -92,8 +92,8 @@ devDependencies:
     specifier: ^1.7.2
     version: 1.7.2(eslint@8.57.0)
   '@stylistic/eslint-plugin-migrate':
-    specifier: ^1.7.0
-    version: 1.7.0(eslint@8.57.0)(typescript@5.4.5)
+    specifier: ^1.8.0
+    version: 1.8.0(eslint@8.57.0)(typescript@5.4.5)
   '@stylistic/eslint-plugin-ts':
     specifier: ^1.6.3
     version: 1.6.3(eslint@8.57.0)(typescript@5.4.5)
@@ -1789,8 +1789,8 @@ packages:
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
-  /@eslint-stylistic/metadata@1.7.0:
-    resolution: {integrity: sha512-EdyFKr1BHcx45o6gMZuCkFS64XHzVGFql0V3oL6mZwepnueulpmjsPxTiRRdrYdRknmQA+vjj1/znFkGRrPWHQ==}
+  /@eslint-stylistic/metadata@1.8.0:
+    resolution: {integrity: sha512-v1PI3/qbYkbqDoyrJh1RxwkJJCsnSccjLa86UUqIvaJlzmd9ruswdjO0wZytxbyfXQZD6Es587rknNpnsoUzjQ==}
     dev: true
 
   /@eslint/eslintrc@2.1.4:
@@ -3706,11 +3706,11 @@ packages:
       picomatch: 4.0.2
     dev: true
 
-  /@stylistic/eslint-plugin-migrate@1.7.0(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-1xcTyY8EIyRLtI86c2XM2GYLv9tBAuelYCH8i2H84k8lSWO8fTg9ArohG3Oo2bj55KFkOHO39lU1QlfKDMpxLQ==}
+  /@stylistic/eslint-plugin-migrate@1.8.0(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-c6ub/uiwK/zJiJfi+RecN1blV1aLYLlrx7uOq8p3GHFeevXmc1RFsjgA0vl2JvSKWzVb4WXpTCqlRXtkKz4NNg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
-      '@eslint-stylistic/metadata': 1.7.0
+      '@eslint-stylistic/metadata': 1.8.0
       '@typescript-eslint/utils': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - eslint
@@ -4351,7 +4351,7 @@ packages:
       '@typescript-eslint/utils': 7.4.0(eslint@8.57.0)(typescript@5.4.5)
       debug: 4.3.4
       eslint: 8.57.0
-      ts-api-utils: 1.2.1(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.4.5)
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -4414,7 +4414,7 @@ packages:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.6.0
-      ts-api-utils: 1.2.1(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.4.5)
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -4436,7 +4436,7 @@ packages:
       is-glob: 4.0.3
       minimatch: 9.0.3
       semver: 7.6.0
-      ts-api-utils: 1.2.1(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.4.5)
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
