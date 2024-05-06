@@ -46,7 +46,7 @@
     "@storybook/test-runner": "^0.17.0",
     "@storybook/types": "^8.0.4",
     "@stylistic/eslint-plugin-jsx": "^1.7.2",
-    "@stylistic/eslint-plugin-migrate": "^1.7.0",
+    "@stylistic/eslint-plugin-migrate": "^1.8.0",
     "@stylistic/eslint-plugin-ts": "^1.6.3",
     "@swc/core": "^1.4.16",
     "@testing-library/dom": "^10.0.0",
