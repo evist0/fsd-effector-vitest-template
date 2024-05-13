@@ -49,7 +49,7 @@
     "@stylistic/eslint-plugin-migrate": "^1.8.0",
     "@stylistic/eslint-plugin-ts": "^1.6.3",
     "@swc/core": "^1.4.16",
-    "@testing-library/dom": "^10.0.0",
+    "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
     "@types/eslint": "^8.56.7",
