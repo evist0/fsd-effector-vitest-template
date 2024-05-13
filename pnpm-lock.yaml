@@ -71,8 +71,8 @@ devDependencies:
     specifier: ^8.0.10
     version: 8.0.10(@types/react@18.2.78)(react-dom@18.2.0)(react@18.2.0)
   '@storybook/csf-tools':
-    specifier: ^8.0.9
-    version: 8.0.9
+    specifier: ^8.0.10
+    version: 8.0.10
   '@storybook/react':
     specifier: ^8.0.9
     version: 8.0.9(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5)
@@ -3502,7 +3502,7 @@ packages:
       '@jest/types': 29.6.3
       '@storybook/core-common': 8.0.4
       '@storybook/csf': 0.1.2
-      '@storybook/csf-tools': 8.0.9
+      '@storybook/csf-tools': 8.0.10
       '@storybook/preview-api': 8.0.4
       '@swc/core': 1.4.16
       '@swc/jest': 0.2.36(@swc/core@1.4.16)
