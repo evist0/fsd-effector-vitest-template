@@ -41,8 +41,8 @@ dependencies:
 
 devDependencies:
   '@feature-sliced/eslint-config':
-    specifier: 0.1.0-beta.6
-    version: 0.1.0-beta.6(eslint-plugin-boundaries@4.2.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+    specifier: 0.1.1
+    version: 0.1.1(eslint-plugin-boundaries@4.2.0)(eslint-plugin-import@2.29.1)
   '@feature-sliced/eslint-plugin-messages':
     specifier: 0.1.0-beta.2
     version: 0.1.0-beta.2
@@ -2210,14 +2210,12 @@ packages:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
 
-  /@feature-sliced/eslint-config@0.1.0-beta.6(eslint-plugin-boundaries@4.2.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
-    resolution: {integrity: sha512-exhyS6DUvAamLlDGS2ToIdm7YTvo3GJD67QNfziHgJrJqCcViMvCW13gmo6QQwFRpXQj6gUnV3QTgPNzLznIsg==}
+  /@feature-sliced/eslint-config@0.1.1(eslint-plugin-boundaries@4.2.0)(eslint-plugin-import@2.29.1):
+    resolution: {integrity: sha512-6g2xgY3TVv24N1828U5gnfT7/R2aNiRghhCs45j6mbltLQik0CR7puKJhZSmhLqczMDM8TRqLVNhaCdvdgZpWw==}
     peerDependencies:
-      eslint: '>=6'
       eslint-plugin-boundaries: '>=2'
       eslint-plugin-import: '>=2'
     dependencies:
-      eslint: 8.57.0
       eslint-plugin-boundaries: 4.2.0(@typescript-eslint/parser@7.8.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.8.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
     dev: true
