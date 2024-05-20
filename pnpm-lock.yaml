@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.3.2)(react@18.3.1)
   '@withease/factories':
-    specifier: ^1.0.3
-    version: 1.0.3
+    specifier: ^1.0.5
+    version: 1.0.5
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -4472,8 +4472,8 @@ packages:
       pretty-format: 29.7.0
     dev: true
 
-  /@withease/factories@1.0.3:
-    resolution: {integrity: sha512-vwvUbWQDDvA3dRy+M1e48Az1Ilwmj4nzdX0wwcC8aqJl4ysG7rGeZaZPGZW09n4eZO/NztdvtQSQW00oS783PQ==}
+  /@withease/factories@1.0.5:
+    resolution: {integrity: sha512-8qcAyBDxuI3F1Qf5ib39pzSfSma9TxyVH/ALOrtkaqnlTuRni76BMbwUyPgCTaEefPOO8sOQKe4SxZbs3p51dQ==}
     dev: false
 
   /@yarnpkg/esbuild-plugin-pnp@3.0.0-rc.15(esbuild@0.20.2):
