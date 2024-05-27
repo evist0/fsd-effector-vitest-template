@@ -140,8 +140,8 @@ devDependencies:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
   chromatic:
-    specifier: ^11.3.5
-    version: 11.3.5
+    specifier: ^11.4.1
+    version: 11.4.1
   effector-swc-plugin:
     specifier: ^0.3.0
     version: 0.3.0(@swc/core@1.5.7)
@@ -6013,8 +6013,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@11.3.5:
-    resolution: {integrity: sha512-M3xCyoEIjdcsXX3NhN60joXxEthy+wxNEcsCMM0u9u8Yna7tJvwvOsJStbOJDwEBo6TdIKckARN3BbArpduFbA==}
+  /chromatic@11.4.1:
+    resolution: {integrity: sha512-f1Ud4EA7KvNKIIkO/qk/0epiCoyHjcyoejuncilSqC0KAHahmIgrWdZxEu+N8QfqqYbEBc5SrhAjiVWHePXTKw==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
