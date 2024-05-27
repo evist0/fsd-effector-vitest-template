@@ -22,7 +22,7 @@
     "clsx": "^2.1.1",
     "effector": "^23.2.1",
     "effector-react": "^23.2.0",
-    "lucide-react": "^0.378.0",
+    "lucide-react": "^0.379.0",
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.2.1",
