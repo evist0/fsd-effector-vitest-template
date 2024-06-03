@@ -44,7 +44,7 @@
     "@storybook/react-vite": "^8.1.3",
     "@storybook/test": "^8.1.3",
     "@storybook/test-runner": "^0.17.0",
-    "@storybook/types": "^8.1.1",
+    "@storybook/types": "^8.1.5",
     "@stylistic/eslint-plugin-jsx": "^2.1.0",
     "@stylistic/eslint-plugin-migrate": "^2.1.0",
     "@stylistic/eslint-plugin-ts": "^1.6.3",
