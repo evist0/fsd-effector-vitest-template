@@ -48,7 +48,7 @@
     "@stylistic/eslint-plugin-jsx": "^2.1.0",
     "@stylistic/eslint-plugin-migrate": "^2.1.0",
     "@stylistic/eslint-plugin-ts": "^1.6.3",
-    "@swc/core": "^1.5.7",
+    "@swc/core": "^1.5.27",
     "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^16.0.0",
