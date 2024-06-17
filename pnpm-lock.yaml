@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^8.1.6
     version: 8.1.6(react@18.3.1)
   '@storybook/addon-onboarding':
-    specifier: 8.1.3
-    version: 8.1.3(react@18.3.1)
+    specifier: 8.1.9
+    version: 8.1.9(react@18.3.1)
   '@storybook/addon-storysource':
     specifier: ^8.1.3
     version: 8.1.3
@@ -2950,8 +2950,8 @@ packages:
       tiny-invariant: 1.3.3
     dev: true
 
-  /@storybook/addon-onboarding@8.1.3(react@18.3.1):
-    resolution: {integrity: sha512-xL6UVK6kC6rJzhR0KVXLtN7bWdtd9+uDUyF0QFtW32KpYsa2d9VMo29Pxx6Ht9Kbchn2SUXS0K27BR0YJA6aFA==}
+  /@storybook/addon-onboarding@8.1.9(react@18.3.1):
+    resolution: {integrity: sha512-bl6f9Y1SQmUOB/M4a30VF6kEUWzQ74qBsFek1q+NswS1poD+t01XTyfcUaAyUHBUKfa8pVGfddW1kBv+aEWd1A==}
     dependencies:
       react-confetti: 6.1.0(react@18.3.1)
     transitivePeerDependencies:
