@@ -21,8 +21,8 @@ dependencies:
     specifier: ^23.2.2
     version: 23.2.2
   effector-react:
-    specifier: ^23.2.0
-    version: 23.2.0(effector@23.2.2)(react@18.3.1)
+    specifier: ^23.2.1
+    version: 23.2.1(effector@23.2.2)(react@18.3.1)
   lucide-react:
     specifier: ^0.394.0
     version: 0.394.0(react@18.3.1)
@@ -6707,8 +6707,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
-  /effector-react@23.2.0(effector@23.2.2)(react@18.3.1):
-    resolution: {integrity: sha512-e7tWJ+lpVKJpzS0UDR2Oi/0dAfvyDYyT44CWIFzBd8aJ7u4VXqP/3RJ4GCa3sH2g8Wffx6IA3BuTUGvgeH8ypg==}
+  /effector-react@23.2.1(effector@23.2.2)(react@18.3.1):
+    resolution: {integrity: sha512-eyjHm095xgrDNe8wtF60w5AjaF+j4Z6XP/DxW8RvlCK4twQT5mkAbIBJxA7BXKLL74RpySai8QmjVBurzapBCw==}
     engines: {node: '>=11.0.0'}
     peerDependencies:
       effector: ^23.0.0
