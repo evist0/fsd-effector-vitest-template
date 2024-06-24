@@ -50,7 +50,7 @@
     "@stylistic/eslint-plugin-ts": "^2.1.0",
     "@swc/core": "^1.5.27",
     "@testing-library/dom": "^10.1.0",
-    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/eslint": "^8.56.7",
     "@types/node": "^20.12.12",
