@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^0.18.2
     version: 0.18.2(@types/node@20.12.12)(prettier@3.3.0)(ts-node@10.9.2)
   '@storybook/types':
-    specifier: ^8.1.6
-    version: 8.1.6
+    specifier: ^8.1.11
+    version: 8.1.11
   '@stylistic/eslint-plugin-jsx':
     specifier: ^2.2.1
     version: 2.2.1(eslint@8.57.0)
