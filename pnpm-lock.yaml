@@ -42,7 +42,7 @@ dependencies:
 devDependencies:
   '@feature-sliced/eslint-config':
     specifier: 0.1.1
-    version: 0.1.1(eslint-plugin-boundaries@4.2.1)(eslint-plugin-import@2.29.1)
+    version: 0.1.1(eslint-plugin-boundaries@4.2.2)(eslint-plugin-import@2.29.1)
   '@feature-sliced/eslint-plugin-messages':
     specifier: 0.1.0-beta.2
     version: 0.1.0-beta.2
@@ -152,8 +152,8 @@ devDependencies:
     specifier: ^3.6.1
     version: 3.6.1(@typescript-eslint/parser@7.13.1)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
   eslint-plugin-boundaries:
-    specifier: ^4.2.1
-    version: 4.2.1(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+    specifier: ^4.2.2
+    version: 4.2.2(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
   eslint-plugin-clsx:
     specifier: ^0.0.3
     version: 0.0.3
@@ -2114,13 +2114,13 @@ packages:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
 
-  /@feature-sliced/eslint-config@0.1.1(eslint-plugin-boundaries@4.2.1)(eslint-plugin-import@2.29.1):
+  /@feature-sliced/eslint-config@0.1.1(eslint-plugin-boundaries@4.2.2)(eslint-plugin-import@2.29.1):
     resolution: {integrity: sha512-6g2xgY3TVv24N1828U5gnfT7/R2aNiRghhCs45j6mbltLQik0CR7puKJhZSmhLqczMDM8TRqLVNhaCdvdgZpWw==}
     peerDependencies:
       eslint-plugin-boundaries: '>=2'
       eslint-plugin-import: '>=2'
     dependencies:
-      eslint-plugin-boundaries: 4.2.1(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-boundaries: 4.2.2(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
     dev: true
 
@@ -7399,8 +7399,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-boundaries@4.2.1(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
-    resolution: {integrity: sha512-BPkpaSh4jC3T+O3vTz77o3UFp/5t5eY8Kcl9em7VphfxdHv+sdZCzU82YIkv81T4ZJsKhfshaJJAjYmd6UBIrQ==}
+  /eslint-plugin-boundaries@4.2.2(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+    resolution: {integrity: sha512-cjwpZqkCXgfz953bc74uDetOtGVxwgMgNZ7hAKi6Oxck+x4oY6Z/9DzgPqAYhtQdSNHFVg+vhft/lSL+snPMQg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -7409,8 +7409,7 @@ packages:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.13.1)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
-      is-core-module: 2.13.1
-      micromatch: 4.0.5
+      micromatch: 4.0.7
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-typescript
@@ -9989,14 +9988,6 @@ packages:
   /methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
-    dev: true
-
-  /micromatch@4.0.5:
-    resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
-    engines: {node: '>=8.6'}
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
     dev: true
 
   /micromatch@4.0.7:
