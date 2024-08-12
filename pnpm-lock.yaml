@@ -194,8 +194,8 @@ devDependencies:
     specifier: ^2.3.2
     version: 2.3.2(typescript@5.4.5)
   msw-storybook-addon:
-    specifier: 2.0.2
-    version: 2.0.2(msw@2.3.2)
+    specifier: 2.0.3
+    version: 2.0.3(msw@2.3.2)
   postcss:
     specifier: ^8.4.39
     version: 8.4.39
@@ -9513,8 +9513,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /msw-storybook-addon@2.0.2(msw@2.3.2):
-    resolution: {integrity: sha512-sdw++X+AoUbaG2ku493ViVqCA/LfqnybXsKXyPUrF3ZS/x8BqGBnkBLmT/0SHCC5zIO3Vfm5zlclAxnhqOOikQ==}
+  /msw-storybook-addon@2.0.3(msw@2.3.2):
+    resolution: {integrity: sha512-CzHmGO32JeOPnyUnRWnB0PFTXCY1HKfHiEB/6fYoUYiFm2NYosLjzs9aBd3XJUryYEN0avJqMNh7nCRDxE5JjQ==}
     peerDependencies:
       msw: ^2.0.0
     dependencies:
