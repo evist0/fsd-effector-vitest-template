@@ -43,7 +43,7 @@
     "@storybook/react": "^8.1.10",
     "@storybook/react-vite": "^8.2.3",
     "@storybook/test": "^8.1.11",
-    "@storybook/test-runner": "^0.18.2",
+    "@storybook/test-runner": "^0.19.1",
     "@storybook/types": "^8.2.3",
     "@stylistic/eslint-plugin-jsx": "^2.3.0",
     "@stylistic/eslint-plugin-migrate": "^2.6.2",
