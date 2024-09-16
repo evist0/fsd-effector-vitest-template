@@ -191,11 +191,11 @@ devDependencies:
     specifier: ^15.2.10
     version: 15.2.10
   msw:
-    specifier: ^2.4.4
-    version: 2.4.4(typescript@5.4.5)
+    specifier: ^2.4.7
+    version: 2.4.7(typescript@5.4.5)
   msw-storybook-addon:
     specifier: 2.0.3
-    version: 2.0.3(msw@2.4.4)
+    version: 2.0.3(msw@2.4.7)
   postcss:
     specifier: ^8.4.41
     version: 8.4.41
@@ -1467,8 +1467,8 @@ packages:
       react: 18.3.1
     dev: true
 
-  /@mswjs/interceptors@0.35.0:
-    resolution: {integrity: sha512-f5cHyIvm4m4g1I5x9EH1etGx0puaU0OaX2szqGRVBVgUC6aMASlOI5hbpe7tJ9l4/VWjCUu5OMraCazLZGI24A==}
+  /@mswjs/interceptors@0.35.6:
+    resolution: {integrity: sha512-PpD687w7qLxVMK176bpQjbzU9O0VC75QnBK5U1lKd29s4hIuxfTItUD6raNKyQ6BN8b64/8HE34RuYTkwH9uPQ==}
     engines: {node: '>=18'}
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
@@ -8074,17 +8074,17 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /msw-storybook-addon@2.0.3(msw@2.4.4):
+  /msw-storybook-addon@2.0.3(msw@2.4.7):
     resolution: {integrity: sha512-CzHmGO32JeOPnyUnRWnB0PFTXCY1HKfHiEB/6fYoUYiFm2NYosLjzs9aBd3XJUryYEN0avJqMNh7nCRDxE5JjQ==}
     peerDependencies:
       msw: ^2.0.0
     dependencies:
       is-node-process: 1.2.0
-      msw: 2.4.4(typescript@5.4.5)
+      msw: 2.4.7(typescript@5.4.5)
     dev: true
 
-  /msw@2.4.4(typescript@5.4.5):
-    resolution: {integrity: sha512-iuM0qGs4YmgYCLH+xqb07w2e/e4fYmsx3+WHVlIOUA34TW1sw+wRpNmOlXnLDkw/T7233Jnm6t+aNf4v2E3e2Q==}
+  /msw@2.4.7(typescript@5.4.5):
+    resolution: {integrity: sha512-lLfwzRjTQhaYaoJq600wCFAmjLQnI7JI2VnUDmqj6icZbxgClwJqaJW2/++kkeQvKKoI8rG8NRFMutoG8+LT7w==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
@@ -8098,7 +8098,7 @@ packages:
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
       '@inquirer/confirm': 3.0.0
-      '@mswjs/interceptors': 0.35.0
+      '@mswjs/interceptors': 0.35.6
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.6.0
       '@types/statuses': 2.0.4
@@ -8106,7 +8106,7 @@ packages:
       graphql: 16.8.1
       headers-polyfill: 4.0.2
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
       path-to-regexp: 6.2.1
       strict-event-emitter: 0.5.1
       type-fest: 4.11.1
@@ -8355,10 +8355,6 @@ packages:
   /os-homedir@1.0.2:
     resolution: {integrity: sha512-B5JU3cabzk8c67mRRd3ECmROafjYMXbuzlwtqdM8IbS8ktlTix8aFGb2bAGKrSRIlnfKwovGUUr72JUPyOb6kQ==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /outvariant@1.4.2:
-    resolution: {integrity: sha512-Ou3dJ6bA/UJ5GVHxah4LnqDwZRwAmWxrG3wtrHrbGnP4RnLCtA64A4F+ae7Y8ww660JaddSoArUR5HjipWSHAQ==}
     dev: true
 
   /outvariant@1.4.3:
