@@ -47,8 +47,8 @@ devDependencies:
     specifier: 0.1.0-beta.2
     version: 0.1.0-beta.2
   '@storybook/addon-a11y':
-    specifier: ^8.2.3
-    version: 8.2.3(storybook@8.3.0)
+    specifier: ^8.3.0
+    version: 8.3.0(storybook@8.3.0)
   '@storybook/addon-essentials':
     specifier: ^8.3.0
     version: 8.3.0(storybook@8.3.0)
@@ -1991,12 +1991,12 @@ packages:
       '@sinonjs/commons': 3.0.1
     dev: true
 
-  /@storybook/addon-a11y@8.2.3(storybook@8.3.0):
-    resolution: {integrity: sha512-n8xKaqXQFWvmiIIBBCvthn9Kjpmw9C4vkxRfwODSw+uxyAH9yaLIpKR3YH3YYxnmiy2xkj90AT5BSoPoRgroCA==}
+  /@storybook/addon-a11y@8.3.0(storybook@8.3.0):
+    resolution: {integrity: sha512-ub/O4tkeQFE3bXEg8VsH3HU9MmqD+CSwGN5QVJmnkCOzpwjnhaVtWFNVZ+3C2AsT0b3sW9llDaK4UgivglV8+A==}
     peerDependencies:
-      storybook: ^8.2.3
+      storybook: ^8.3.0
     dependencies:
-      '@storybook/addon-highlight': 8.2.3(storybook@8.3.0)
+      '@storybook/addon-highlight': 8.3.0(storybook@8.3.0)
       axe-core: 4.8.4
       storybook: 8.3.0
     dev: true
@@ -2073,15 +2073,6 @@ packages:
       '@storybook/addon-viewport': 8.3.0(storybook@8.3.0)
       storybook: 8.3.0
       ts-dedent: 2.2.0
-    dev: true
-
-  /@storybook/addon-highlight@8.2.3(storybook@8.3.0):
-    resolution: {integrity: sha512-uc2dlZv7OkM5DGeN1wR7aZ4hmH1n6B38dlFzVh0rx+kghtSyUcQsaFPKR36Ky6cHHXa1z93TvEXJKkA1KtM7oQ==}
-    peerDependencies:
-      storybook: ^8.2.3
-    dependencies:
-      '@storybook/global': 5.0.0
-      storybook: 8.3.0
     dev: true
 
   /@storybook/addon-highlight@8.3.0(storybook@8.3.0):
