@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^0.19.1
     version: 0.19.1(@types/node@22.5.2)(prettier@3.3.3)(storybook@8.3.0)(ts-node@10.9.2)
   '@storybook/types':
-    specifier: ^8.2.3
-    version: 8.2.3(storybook@8.3.0)
+    specifier: ^8.3.0
+    version: 8.3.0(storybook@8.3.0)
   '@stylistic/eslint-plugin-jsx':
     specifier: ^2.3.0
     version: 2.3.0(eslint@8.57.0)
@@ -2445,10 +2445,10 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
-  /@storybook/types@8.2.3(storybook@8.3.0):
-    resolution: {integrity: sha512-YJ3kVkx28V10UtmLWnB6xsjKR5jhHq/jzp3tRl680SFqfKQuUnO9ZPCse6oFickjniHkrC8LVcbZc1+99AgLXw==}
+  /@storybook/types@8.3.0(storybook@8.3.0):
+    resolution: {integrity: sha512-2lF3pac9ktjUD85uPQBAxfNwbch4Vr56HB1Vnq7mLDIkV+OiLn9jEZ4Oabpq/y8jWYmGY5giRru0dIlZ+iPQuQ==}
     peerDependencies:
-      storybook: ^8.2.3
+      storybook: ^8.3.0
     dependencies:
       storybook: 8.3.0
     dev: true
