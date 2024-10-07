@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^8.3.0
     version: 8.3.0(@storybook/test@8.3.0)(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)
   '@storybook/react-vite':
-    specifier: ^8.2.3
-    version: 8.2.3(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6)
+    specifier: ^8.3.0
+    version: 8.3.0(@storybook/test@8.3.0)(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6)
   '@storybook/test':
     specifier: ^8.3.0
     version: 8.3.0(storybook@8.3.0)
@@ -1951,11 +1951,11 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/builder-vite@8.2.3(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6):
-    resolution: {integrity: sha512-EGjs3bjvRCmXofC8etbXbhAb+7ahG3c4kmo/wxCeTZPEbPy4WNn4SSoZyxpNDv3OIYGdWQ+SJsjaNCqqPVy1DA==}
+  /@storybook/builder-vite@8.3.0(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6):
+    resolution: {integrity: sha512-9qo3zcZkEpy69E7cx9OHHexBe9+25vH0p+4sWZSjl2sjqjhaxLN5eXnODQbDsOKZNRVrLVTGmKxfFJzAJFnY0w==}
     peerDependencies:
       '@preact/preset-vite': '*'
-      storybook: ^8.2.3
+      storybook: ^8.3.0
       typescript: '>= 4.3.x'
       vite: ^4.0.0 || ^5.0.0
       vite-plugin-glimmerx: '*'
@@ -1967,7 +1967,7 @@ packages:
       vite-plugin-glimmerx:
         optional: true
     dependencies:
-      '@storybook/csf-plugin': 8.2.3(storybook@8.3.0)
+      '@storybook/csf-plugin': 8.3.0(storybook@8.3.0)
       '@types/find-cache-dir': 3.2.1
       browser-assert: 1.2.1
       es-module-lexer: 1.5.3
@@ -2075,15 +2075,6 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
-
-  /@storybook/csf-plugin@8.2.3(storybook@8.3.0):
-    resolution: {integrity: sha512-j6w9hD/Ze4utK4Hg5ILKsgGkN4QwYaCo67vKsyUB78Y1v7WiWQIM6UsuOVwXGL1SpAtF5NDtu/92/jAJ094zqw==}
-    peerDependencies:
-      storybook: ^8.2.3
-    dependencies:
-      storybook: 8.3.0
-      unplugin: 1.8.2
     dev: true
 
   /@storybook/csf-plugin@8.3.0(storybook@8.3.0):
@@ -2207,18 +2198,6 @@ packages:
       storybook: 8.3.0
     dev: true
 
-  /@storybook/react-dom-shim@8.2.3(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0):
-    resolution: {integrity: sha512-N8AsM6N1S867GGWt2J2q5oY5ryqxohh3y1HqNtjg+wXf5+RkTD6M2Cgqe6p+JHz81nDKyvvVzP60MvvDhY5VOA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.2.3
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      storybook: 8.3.0
-    dev: true
-
   /@storybook/react-dom-shim@8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0):
     resolution: {integrity: sha512-87X4cvgwFT1ll5SzXgQq6iGbkVCgxLBpBm58akF/hzpeRkwfJDncGi/A5hElOJrBg63IkznmSJE7tf9RkrboqQ==}
     peerDependencies:
@@ -2231,19 +2210,19 @@ packages:
       storybook: 8.3.0
     dev: true
 
-  /@storybook/react-vite@8.2.3(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6):
-    resolution: {integrity: sha512-a7HKCu/rd7GyzG1sr0W13gaOC1kEzJfGxI+Nb8RrH5+yRH5atYEsiBD80hdJNbOGdgp4LInBHZKiq0xE8VJ8xQ==}
+  /@storybook/react-vite@8.3.0(@storybook/test@8.3.0)(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6):
+    resolution: {integrity: sha512-VcKp/mpO8M+JsyprTGLLvAzwx7PChdWFDBasyQ0MO+YVwci78gPAZnfWNZaaEB2mdDgPPGuoSTwBgzZmP3FsPg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.2.3
+      storybook: ^8.3.0
       vite: ^4.0.0 || ^5.0.0
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.4.5)(vite@5.3.6)
       '@rollup/pluginutils': 5.1.0
-      '@storybook/builder-vite': 8.2.3(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6)
-      '@storybook/react': 8.2.3(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)
+      '@storybook/builder-vite': 8.3.0(storybook@8.3.0)(typescript@5.4.5)(vite@5.3.6)
+      '@storybook/react': 8.3.0(@storybook/test@8.3.0)(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5)
       find-up: 5.0.0
       magic-string: 0.30.8
       react: 18.3.1
@@ -2255,45 +2234,11 @@ packages:
       vite: 5.3.6(@types/node@22.5.2)
     transitivePeerDependencies:
       - '@preact/preset-vite'
+      - '@storybook/test'
       - rollup
       - supports-color
       - typescript
       - vite-plugin-glimmerx
-    dev: true
-
-  /@storybook/react@8.2.3(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-818F6pJWFBiwG0r6DiUVrV+qndwbIso2gtgJoituBgIJO2eIzNmkPNSsckbaR7u+FpE4dWiIIhmDVZSnRwvDlA==}
-    engines: {node: '>=18.0.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.2.3
-      typescript: '>= 4.2.x'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 8.2.3(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)
-      '@types/escodegen': 0.0.6
-      '@types/estree': 0.0.51
-      '@types/node': 18.19.21
-      acorn: 7.4.1
-      acorn-jsx: 5.3.2(acorn@7.4.1)
-      acorn-walk: 7.2.0
-      escodegen: 2.1.0
-      html-tags: 3.3.1
-      lodash: 4.17.21
-      prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-element-to-jsx-string: 15.0.0(react-dom@18.3.1)(react@18.3.1)
-      semver: 7.6.3
-      storybook: 8.3.0
-      ts-dedent: 2.2.0
-      type-fest: 2.19.0
-      typescript: 5.4.5
-      util-deprecate: 1.0.2
     dev: true
 
   /@storybook/react@8.3.0(@storybook/test@8.3.0)(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.4.5):
@@ -2947,12 +2892,6 @@ packages:
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
     dependencies:
       '@types/node': 22.5.2
-    dev: true
-
-  /@types/node@18.19.21:
-    resolution: {integrity: sha512-2Q2NeB6BmiTFQi4DHBzncSoq/cJMLDdhPaAoJFnFCyD9a8VPZRf7a1GAwp1Edb7ROaZc5Jz/tnZyL6EsWMRaqw==}
-    dependencies:
-      undici-types: 5.26.5
     dev: true
 
   /@types/node@20.12.12:
