@@ -140,8 +140,8 @@ devDependencies:
     specifier: ^10.4.20
     version: 10.4.20(postcss@8.4.47)
   chromatic:
-    specifier: ^11.10.4
-    version: 11.10.4
+    specifier: ^11.12.5
+    version: 11.12.5
   effector-swc-plugin:
     specifier: ^0.4.1
     version: 0.4.1(@swc/core@1.6.6)
@@ -4138,8 +4138,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /chromatic@11.10.4:
-    resolution: {integrity: sha512-nfgDpW5gQ4FtgV1lZXXfqLjONKDCh2K4vwI3dbZrtU1ObOL9THyAzpIdnK9LRcNSeisDLX+XFCryfMg1Ql2U2g==}
+  /chromatic@11.12.5:
+    resolution: {integrity: sha512-5z+BXQy3TMyXIzCdCDO9Psc8aMs9kIrCFHhMgYbwA6dTXxAL0oUjHZbICn5h4Ay/fM9cZQPaCH9T7a3myPA8Sw==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
