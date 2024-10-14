@@ -191,11 +191,11 @@ devDependencies:
     specifier: ^15.2.10
     version: 15.2.10
   msw:
-    specifier: ^2.4.7
-    version: 2.4.7(typescript@5.4.5)
+    specifier: ^2.4.11
+    version: 2.4.11(typescript@5.4.5)
   msw-storybook-addon:
     specifier: 2.0.3
-    version: 2.0.3(msw@2.4.7)
+    version: 2.0.3(msw@2.4.11)
   postcss:
     specifier: ^8.4.47
     version: 8.4.47
@@ -1459,8 +1459,8 @@ packages:
       react: 18.3.1
     dev: true
 
-  /@mswjs/interceptors@0.35.6:
-    resolution: {integrity: sha512-PpD687w7qLxVMK176bpQjbzU9O0VC75QnBK5U1lKd29s4hIuxfTItUD6raNKyQ6BN8b64/8HE34RuYTkwH9uPQ==}
+  /@mswjs/interceptors@0.35.9:
+    resolution: {integrity: sha512-SSnyl/4ni/2ViHKkiZb8eajA/eN1DNFaHjhGiLUdZvDz6PKF4COSf/17xqSz64nOo2Ia29SA6B2KNCsyCbVmaQ==}
     engines: {node: '>=18'}
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
@@ -7597,17 +7597,17 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
 
-  /msw-storybook-addon@2.0.3(msw@2.4.7):
+  /msw-storybook-addon@2.0.3(msw@2.4.11):
     resolution: {integrity: sha512-CzHmGO32JeOPnyUnRWnB0PFTXCY1HKfHiEB/6fYoUYiFm2NYosLjzs9aBd3XJUryYEN0avJqMNh7nCRDxE5JjQ==}
     peerDependencies:
       msw: ^2.0.0
     dependencies:
       is-node-process: 1.2.0
-      msw: 2.4.7(typescript@5.4.5)
+      msw: 2.4.11(typescript@5.4.5)
     dev: true
 
-  /msw@2.4.7(typescript@5.4.5):
-    resolution: {integrity: sha512-lLfwzRjTQhaYaoJq600wCFAmjLQnI7JI2VnUDmqj6icZbxgClwJqaJW2/++kkeQvKKoI8rG8NRFMutoG8+LT7w==}
+  /msw@2.4.11(typescript@5.4.5):
+    resolution: {integrity: sha512-TVEw9NOPTc6ufOQLJ53234S9NBRxQbu7xFMxs+OCP43JQcNEIOKiZHxEm2nDzYIrwccoIhUxUf8wr99SukD76A==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
@@ -7621,7 +7621,7 @@ packages:
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
       '@inquirer/confirm': 3.0.0
-      '@mswjs/interceptors': 0.35.6
+      '@mswjs/interceptors': 0.35.9
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.6.0
       '@types/statuses': 2.0.4
@@ -7630,9 +7630,9 @@ packages:
       headers-polyfill: 4.0.2
       is-node-process: 1.2.0
       outvariant: 1.4.3
-      path-to-regexp: 6.2.1
+      path-to-regexp: 6.3.0
       strict-event-emitter: 0.5.1
-      type-fest: 4.11.1
+      type-fest: 4.26.1
       typescript: 5.4.5
       yargs: 17.7.2
     dev: true
@@ -8008,8 +8008,8 @@ packages:
     resolution: {integrity: sha512-7lf7qcQidTku0Gu3YDPc8DJ1q7OOucfa/BSsIwjuh56VU7katFvuM8hULfkwB3Fns/rsVF7PwPKVw1sl5KQS9w==}
     dev: true
 
-  /path-to-regexp@6.2.1:
-    resolution: {integrity: sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==}
+  /path-to-regexp@6.3.0:
+    resolution: {integrity: sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==}
     dev: true
 
   /path-type@4.0.0:
@@ -9482,11 +9482,6 @@ packages:
   /type-fest@3.13.1:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
-    dev: true
-
-  /type-fest@4.11.1:
-    resolution: {integrity: sha512-MFMf6VkEVZAETidGGSYW2B1MjXbGX+sWIywn2QPEaJ3j08V+MwVRHMXtf2noB8ENJaD0LIun9wh5Z6OPNf1QzQ==}
-    engines: {node: '>=16'}
     dev: true
 
   /type-fest@4.26.1:
