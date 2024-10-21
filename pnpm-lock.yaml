@@ -18,11 +18,11 @@ dependencies:
     specifier: ^2.1.1
     version: 2.1.1
   effector:
-    specifier: ^23.2.2
-    version: 23.2.2
+    specifier: ^23.2.3
+    version: 23.2.3
   effector-react:
     specifier: ^23.2.1
-    version: 23.2.1(effector@23.2.2)(react@18.3.1)
+    version: 23.2.1(effector@23.2.3)(react@18.3.1)
   lucide-react:
     specifier: ^0.438.0
     version: 0.438.0(react@18.3.1)
@@ -159,7 +159,7 @@ devDependencies:
     version: 0.0.9(eslint@8.57.0)(typescript@5.4.5)
   eslint-plugin-effector:
     specifier: ^0.14.0
-    version: 0.14.0(effector@23.2.2)(eslint@8.57.0)
+    version: 0.14.0(effector@23.2.3)(eslint@8.57.0)
   eslint-plugin-i:
     specifier: ^2.29.1
     version: 2.29.1(@typescript-eslint/parser@7.16.0)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0)
@@ -4667,14 +4667,14 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
-  /effector-react@23.2.1(effector@23.2.2)(react@18.3.1):
+  /effector-react@23.2.1(effector@23.2.3)(react@18.3.1):
     resolution: {integrity: sha512-eyjHm095xgrDNe8wtF60w5AjaF+j4Z6XP/DxW8RvlCK4twQT5mkAbIBJxA7BXKLL74RpySai8QmjVBurzapBCw==}
     engines: {node: '>=11.0.0'}
     peerDependencies:
       effector: ^23.0.0
       react: '>=16.8.0 <19.0.0'
     dependencies:
-      effector: 23.2.2
+      effector: 23.2.3
       react: 18.3.1
       use-sync-external-store: 1.2.0(react@18.3.1)
     dev: false
@@ -4687,8 +4687,8 @@ packages:
       '@swc/core': 1.6.6
     dev: true
 
-  /effector@23.2.2:
-    resolution: {integrity: sha512-gzwATi9pgZQx0TNhM2LESmoUpEO+vhibLZPCvVzi7spMvKFwKnfJV2PFj4xqNFFSC35TXaznx30ne62dCQ6ZRQ==}
+  /effector@23.2.3:
+    resolution: {integrity: sha512-nBk3pzdJKT/Sn3OhLUurZoxKXUBd+iqiYHNoBRDFc8EE/vXp2JPNsickX59ZjlDbsWZwTMCVV3tovxjRo+vMGQ==}
     engines: {node: '>=11.0.0'}
 
   /electron-to-chromium@1.5.13:
@@ -5128,14 +5128,14 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-effector@0.14.0(effector@23.2.2)(eslint@8.57.0):
+  /eslint-plugin-effector@0.14.0(effector@23.2.3)(eslint@8.57.0):
     resolution: {integrity: sha512-nMOg7yEDsRVNfXgstDrde/l0lTXzL0fbK5Y/EcTzNVN/F753bIbemJvRoedZgKaH0OrWM3HaK1OrDTphBJyN7w==}
     engines: {node: ^16 || ^17 || ^18 || ^19 || ^20 || ^21}
     peerDependencies:
       effector: ^23
       eslint: 7 || 8
     dependencies:
-      effector: 23.2.2
+      effector: 23.2.3
       eslint: 8.57.0
       prettier: 2.8.8
     dev: true
